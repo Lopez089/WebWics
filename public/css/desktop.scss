@@ -1,0 +1,107 @@
+@import "general";
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	html{
+	    body{
+	      #contenedor{
+	        header{
+	          background: $color4;
+	          height: 10%;
+	          visibility: visible;
+	        }
+	        section{
+	          background: $color3;
+	          
+	          .col{
+	          		float: left;
+    				width: 50%;
+            		background: $color2; 
+           			height: 100%;
+           			display: grid;
+           			text-align: left;
+        		}
+        		.col_text{
+        			padding: 7% 7% 7% 0%;
+        			width:43%;	
+        		}
+	        }
+	        footer{
+	          background: $color1;
+	          height: 10%;
+	          }
+	      }
+	       .contenedorModal{
+		        h2{
+		          font-size: 2.2em;
+		        }
+		        p{
+		          font-size: 1.4em;
+		        }
+		        form{
+		        	  display: inline-flex;
+		        	  width: 100%;
+		        	input[type="text"] {
+		                    width:100%;
+		                    height: 60px;
+		                    padding-left: 0px;
+		                    margin-top: 5%;
+		                }
+		                input[type="submit"] {
+		                  width:40%;
+		                  height: 60px;
+		                  margin-top: 5%;
+		                  margin-left: 2%;;
+		                  }
+		          input{
+		            font-size: 1.4em;
+		          }
+		        }
+		        .textP{
+		          font-size: 0.9em;
+		        }
+      		}
+      		.feedbackContenedor{
+      			#feedbackText{
+            		width: 40%;
+           			height: 40%;
+         		 }
+		        #feedback{
+		          width: 27%;
+		          height: 26%;
+		        }
+		        .feedbackText{
+		          
+		        }
+		      } 
+		    
+	    }
+	  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	html{
+	    body{
+	      #contenedor{
+	      	max-width: 1200px ;
+	      	margin-left: auto;
+  			margin-right: auto;
+	        header{
+	          background: $color1;
+	          height: 10%;
+	          visibility: visible;
+	        }
+	        section{
+	          background: $color2;
+	          height: 80%;
+	        }
+	        footer{
+	          background: $color4;
+	          height: 10%;
+	          }
+	      }
+	    }
+  	}
+
+}

@@ -1,0 +1,75 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+    link(href='/css/styles.css', rel='stylesheet', type='text/css')
+    script(type='text/javascript', src='js/script.js')
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-125855167-1')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-125855167-1');
+  body
+    // CONTENEDOR
+    #contenedor
+      // HEADER
+      header
+        p Wics
+      // FIN HEADER
+      // SECTION
+      section
+        .col
+          img(src='img/wics.png', alt='')
+        .col.col_text
+          h1 ¡Puedes ver tus series en tú televisor!
+          p.precio 25.99€
+          p
+            | ¿Buscando como poder ver series en tú televisor? ¿Buscando como poder pasar el contenido de su móvil al televisor? Wics es para ti. Este dispositivo es muy útil para ver series y películas en su televisor. Considere este dispositivo como tu aliado para ver tus series favoritas.
+          button(onclick=" ga('send','event','Comprar','click',); abrir() ") Comprar ahora por 25.99€
+      // FIN SECTION
+      // FOOTER
+      footer
+        p © 2018
+      // FIN FOOTER
+      // FIN CONTENEDOR
+      // MODAL
+      #abrir.modal
+        .contenedorModal
+          span.cerrar(onclick="ga('send','event','CerrarComprar','click',); cerrar()") X
+          h2
+            | ¡No te vayas con la 
+            span manos vacías!
+          p
+            | ¿Quiere saber más sobre Wics para ver todas tus series?  
+            br
+            | Déjanos tu correo electrónico y le informaremos de todas la novedades y de su lanzamiento. Disfruta de un 20% en su compra.
+          form(action='/enviar', method='post')
+            input(type='text', name='mail', placeholder='Dirección de email')
+            br
+            br
+            input(type='submit', value='¡Susbribirse!', onclick="ga('send','event','Subcricion','click')")
+          p.textP Y siempre podrá darse de baja de la suscripción si no quieres más info
+      // FIN MODAL
+      // feedback
+      .feedbackContenedor
+        #feedbackText
+          p ¿Cómo podríamo mejorar?
+          form(action='/enviar', method="post")
+            textarea(name='comentario', placeholder='Pidenos lo que necesitas')
+            input.cancelar(onclick=" ga('send','event','CerrarComentario','click',); cerrarComen()", type='submit', value='CANCELAR')
+            input(onclick="ga('send','event','EnviarComentario','click',)", type='submit', value='ENVIAR COMENTARIO' )
+        #feedback
+          p ¿Encontraste lo que buscabas?
+          ul
+            li(onclick="ga('send','event','EncontrarNo','click',); abrirComentario()")
+              img(src='img/triste.png', alt='')
+              span No
+            li(onclick="ga('send','event','EncontrarSi','click',); abrirComentario()")
+              img(src='img/sonrisa.png', alt='')
+              span Sí
+      // FIN feedback
